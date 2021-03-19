@@ -103,5 +103,18 @@ public class UserValidationProcess
             return false;
         }
     }
+
+    public boolean validateSpecialCharacter(java.lang.String name)
+    {
+        String pattern = "^(.*[A-Z]{1,}.*[0-9]{1,}.*[~!@#$%^&*]?[A-Za-z0-9]{5,})$";
+        if( name.matches(pattern))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 

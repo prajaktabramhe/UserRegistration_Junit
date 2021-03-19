@@ -114,18 +114,21 @@ public class UserRegistrationTest
 
     //for Password Validation with minimum 8 character
     @Test
-    public void givenPassword_WhenPasswordHaveMinimum8Characters_ShouldReturn_true() {
+    public void givenPassword_WhenPasswordHaveMinimum8Characters_ShouldReturn_true()
+    {
         boolean result = userValidationProcess.validatePassword("Prajakta14");
         Assertions.assertTrue(result);
     }
     @Test
-    public void givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_false() {
+    public void givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_false()
+    {
         boolean result = userValidationProcess.validatePassword("gfbn");
         Assertions.assertFalse(result);
     }
     //for Password Validation with At least one uppercase
     @Test
-    public void givenPassword_WhenPasswordHaveAtleast1UpperCase_ShouldReturn_true() {
+    public void givenPassword_WhenPasswordHaveAtleast1UpperCase_ShouldReturn_true()
+    {
         boolean result = userValidationProcess.passwordAtLeastOneUpperCase("Prajakta141996");
         Assertions.assertTrue(result);
     }
@@ -136,13 +139,27 @@ public class UserRegistrationTest
         Assertions.assertFalse(result);
     }
     @Test
-    public void givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true() {
+    public void givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true()
+    {
         boolean result = userValidationProcess.validateAlteastOneNumber("prajakta14");
         Assertions.assertTrue(result);
     }
     @Test
-    public void givenPassword_WhenPasswordDoNotHaveAnyDigit_ShouldReturn_false() {
+    public void givenPassword_WhenPasswordDoNotHaveAnyDigit_ShouldReturn_false()
+    {
         boolean result = userValidationProcess.validateAlteastOneNumber("prajakta");
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1SpecialCharacter_ShouldReturn_true()
+    {
+        boolean result = userValidationProcess.validateSpecialCharacter("Praju14@12");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAnySpecialCharacter_ShouldReturn_false()
+    {
+        boolean result = userValidationProcess.validateSpecialCharacter("Praju1412");
         Assertions.assertFalse(result);
     }
 }

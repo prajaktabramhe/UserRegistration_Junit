@@ -130,8 +130,19 @@ public class UserRegistrationTest
         Assertions.assertTrue(result);
     }
     @Test
-    public void givenPassword_WhenPasswordDoNotHaveAtleast1UpperCase_ShouldReturn_false() {
+    public void givenPassword_WhenPasswordDoNotHaveAtleast1UpperCase_ShouldReturn_false()
+    {
         boolean result = userValidationProcess.passwordAtLeastOneUpperCase("prajakta141996");
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true() {
+        boolean result = userValidationProcess.validateAlteastOneNumber("prajakta14");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAnyDigit_ShouldReturn_false() {
+        boolean result = userValidationProcess.validateAlteastOneNumber("prajakta");
         Assertions.assertFalse(result);
     }
 }

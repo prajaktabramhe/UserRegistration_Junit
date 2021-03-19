@@ -8,7 +8,7 @@ public class UserRegistrationTest
 {
     UserValidationProcess userValidationProcess = new UserValidationProcess();
 
-    //for firstName
+    //for firstName Validation
     @Test
     public void givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_True()
     {
@@ -37,7 +37,7 @@ public class UserRegistrationTest
        Assertions.assertFalse(result);
     }
 
-    //For lastName
+    //For lastName Validation
     @Test
     public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()
     {
@@ -63,8 +63,7 @@ public class UserRegistrationTest
         Assertions.assertFalse(result);
     }
 
-    //For Email
-
+    //For Email Validation
     @Test
     public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True()
     {
@@ -84,7 +83,7 @@ public class UserRegistrationTest
         Assertions.assertTrue(result);
     }
 
-    //for Mobile Number
+    //for Mobile Number Validation
 
     @Test
     public void givenPhoneNumber_WhenPhoneNumberIsFollowedByCountryCode_True()

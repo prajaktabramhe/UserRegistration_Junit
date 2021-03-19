@@ -1,6 +1,7 @@
 package com.bridgelabz.userregistrationtest;
 
 import com.bridgelabz.userregistration.UserValidationProcess;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,7 @@ public class UserRegistrationTest
 {
     UserValidationProcess userValidationProcess = new UserValidationProcess();
 
-    //for firstName
+    //for firstName Validation
     @Test
     public void givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_True()
     {
@@ -37,7 +38,7 @@ public class UserRegistrationTest
        Assertions.assertFalse(result);
     }
 
-    //For lastName
+    //For lastName Validation
     @Test
     public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()
     {
@@ -62,5 +63,54 @@ public class UserRegistrationTest
         boolean result = userValidationProcess.validateLastName("Br");
         Assertions.assertFalse(result);
     }
+
+
+    //For Email Validation
+    @Test
+    public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.co");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenEmail_WhenEmailContainOnlyOneLetterAfterDot_ShouldReturn_False()
+    {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.c");
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void givenEmail_WhenEmailStartsWithCapitalLetter_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateEmail("Prajakta@gmail.com");
+        Assertions.assertTrue(result);
+    }
+
+    //for Mobile Number Validation
+
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsFollowedByCountryCode_True()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("91 8149240833");
+        Assertions.assertTrue( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNOtFollowedByCountryCode_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("8149240833");
+        Assertions.assertFalse( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNOTTenDigit_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("91 14924");
+        Assertions.assertFalse( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberNOTFollowedSpaceBetweenCountryCode_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("918149240833");
+        Assertions.assertFalse( result);
+    }
+   
 
 }

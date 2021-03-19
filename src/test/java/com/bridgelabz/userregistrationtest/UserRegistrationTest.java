@@ -84,4 +84,32 @@ public class UserRegistrationTest
         Assertions.assertTrue(result);
     }
 
+    //for Mobile Number
+
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsFollowedByCountryCode_True()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("91 8149240833");
+        Assertions.assertTrue( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNOtFollowedByCountryCode_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("8149240833");
+        Assertions.assertTrue( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNOTTenDigit_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("91 14924");
+        Assertions.assertTrue( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberNOTFollowedSpaceBetweenCountryCode_False()
+    {
+        boolean result = userValidationProcess.validateMobileNumber("918149240833");
+        Assertions.assertTrue( result);
+    }
+
+
 }

@@ -41,4 +41,17 @@ public class UserValidationProcess {
             return false;
         }
     }
+
+    public boolean validateMobileNumber(String name)
+    {
+        String pattern =  "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
+        if( name.matches(pattern))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

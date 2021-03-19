@@ -63,5 +63,18 @@ public class UserValidationProcess
         }
     }
 
+    //for Password validation
+    public boolean validatePassword(String name)
+    {
+        String pattern = "^[a-zA-Z0-9]{8,}$";
+        if( name.matches(pattern))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 

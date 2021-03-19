@@ -109,8 +109,18 @@ public class UserRegistrationTest
     public void givenPhoneNumber_WhenPhoneNumberNOTFollowedSpaceBetweenCountryCode_False()
     {
         boolean result = userValidationProcess.validateMobileNumber("918149240833");
-        Assertions.assertFalse( result);
+        Assertions.assertFalse(result);
     }
-   
 
+    //for Password Validation with minimum 8 character
+    @Test
+    public void givenPassword_WhenPasswordHaveMinimum8Characters_ShouldReturn_true() {
+        boolean result = userValidationProcess.validatePassword("Prajakta14");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_false() {
+        boolean result = userValidationProcess.validatePassword("gfbn");
+        Assertions.assertFalse(result);
+    }
 }

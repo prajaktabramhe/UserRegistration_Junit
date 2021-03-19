@@ -19,7 +19,7 @@ public class UserRegistrationTest
     public void givenFirstName_WhenFirstNameInLowerCase_ShouldReturn_false()
     {
        boolean result = userValidationProcess.validateFirstName("prajakta");
-       Assertions.assertTrue(result);
+       Assertions.assertFalse(result);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class UserRegistrationTest
      public void givenFirstName_WhenFirstNameStartWithLessThanThreeLetters_ShouldReturn_False()
     {
        boolean result = userValidationProcess.validateFirstName("Pr");
-       Assertions.assertTrue(result);
+       Assertions.assertFalse(result);
     }
 
 }

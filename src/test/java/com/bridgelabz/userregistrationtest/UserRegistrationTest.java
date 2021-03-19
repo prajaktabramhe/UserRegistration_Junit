@@ -123,4 +123,15 @@ public class UserRegistrationTest
         boolean result = userValidationProcess.validatePassword("gfbn");
         Assertions.assertFalse(result);
     }
+    //for Password Validation with At least one uppercase
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1UpperCase_ShouldReturn_true() {
+        boolean result = userValidationProcess.passwordAtLeastOneUpperCase("Prajakta141996");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAtleast1UpperCase_ShouldReturn_false() {
+        boolean result = userValidationProcess.passwordAtLeastOneUpperCase("prajakta141996");
+        Assertions.assertFalse(result);
+    }
 }

@@ -76,5 +76,19 @@ public class UserValidationProcess
             return false;
         }
     }
+
+
+    public boolean passwordAtLeastOneUpperCase(java.lang.String name)
+    {
+        String pattern =  "^(.*[A-Z]{1}[A-Za-z0-9]{7,})$";
+        if( name.matches(pattern))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 

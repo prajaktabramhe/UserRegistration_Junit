@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bd9f41a-31fd-4211-a6b7-24cde8935371" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/modules/UserRegistrationProgram.test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+=======
+>>>>>>> UC1_ValidName
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/userregistration/UserValidationProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/userregistration/UserValidationProcess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/userregistrationtest/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/userregistrationtest/UserRegistrationTest.java" afterDir="false" />
     </list>

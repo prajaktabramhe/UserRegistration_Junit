@@ -37,4 +37,30 @@ public class UserRegistrationTest
        Assertions.assertFalse(result);
     }
 
+    //For lastName
+    @Test
+    public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateLastName("Bramhe");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenLastName_WhenLastNameInLowerCase_ShouldReturn_false()
+    {
+        boolean result = userValidationProcess.validateLastName("bramhe");
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void givenLastName_WhenLastNameStartHaveMinThreeLetters_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateLastName("Pra");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenLastName_WhenLastNameStartWithLessThanThreeLetters_ShouldReturn_False()
+    {
+        boolean result = userValidationProcess.validateLastName("Br");
+        Assertions.assertFalse(result);
+    }
+
 }

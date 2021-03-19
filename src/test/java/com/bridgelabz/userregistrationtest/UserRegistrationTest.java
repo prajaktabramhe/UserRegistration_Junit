@@ -20,7 +20,7 @@ public class UserRegistrationTest
     public void givenFirstName_WhenFirstNameInLowerCase_ShouldReturn_false()
     {
        boolean result = userValidationProcess.validateFirstName("prajakta");
-       Assertions.assertTrue(result);
+       Assertions.assertFalse(result);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class UserRegistrationTest
      public void givenFirstName_WhenFirstNameStartWithLessThanThreeLetters_ShouldReturn_False()
     {
        boolean result = userValidationProcess.validateFirstName("Pr");
-       Assertions.assertTrue(result);
+       Assertions.assertFalse(result);
     }
 
     //For lastName
@@ -48,7 +48,7 @@ public class UserRegistrationTest
     public void givenLastName_WhenLastNameInLowerCase_ShouldReturn_false()
     {
         boolean result = userValidationProcess.validateLastName("bramhe");
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
     }
     @Test
     public void givenLastName_WhenLastNameStartHaveMinThreeLetters_ShouldReturn_True()
@@ -60,7 +60,7 @@ public class UserRegistrationTest
     public void givenLastName_WhenLastNameStartWithLessThanThreeLetters_ShouldReturn_False()
     {
         boolean result = userValidationProcess.validateLastName("Br");
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
     }
 
     //For Email
@@ -75,7 +75,7 @@ public class UserRegistrationTest
     public void givenEmail_WhenEmailContainOnlyOneLetterAfterDot_ShouldReturn_False()
     {
         boolean result = userValidationProcess.validateEmail("abc@gmail.c");
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
     }
     @Test
     public void givenEmail_WhenEmailStartsWithCapitalLetter_ShouldReturn_True()

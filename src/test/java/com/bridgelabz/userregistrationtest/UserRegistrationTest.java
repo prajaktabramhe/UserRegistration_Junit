@@ -63,4 +63,25 @@ public class UserRegistrationTest
         Assertions.assertTrue(result);
     }
 
+    //For Email
+
+    @Test
+    public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.co");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenEmail_WhenEmailContainOnlyOneLetterAfterDot_ShouldReturn_False()
+    {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.c");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenEmail_WhenEmailStartsWithCapitalLetter_ShouldReturn_True()
+    {
+        boolean result = userValidationProcess.validateEmail("Prajakta@gmail.com");
+        Assertions.assertTrue(result);
+    }
+
 }

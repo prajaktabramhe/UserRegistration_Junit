@@ -141,19 +141,19 @@ public class UserRegistrationTest
     @Test
     public void givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true()
     {
-        boolean result = userValidationProcess.validateAlteastOneNumber("prajakta14");
+        boolean result = userValidationProcess.validateAlteastOneNumber("P14raju1996");
         Assertions.assertTrue(result);
     }
     @Test
     public void givenPassword_WhenPasswordDoNotHaveAnyDigit_ShouldReturn_false()
     {
-        boolean result = userValidationProcess.validateAlteastOneNumber("prajakta");
+        boolean result = userValidationProcess.validateAlteastOneNumber("Prajakta@");
         Assertions.assertFalse(result);
     }
     @Test
     public void givenPassword_WhenPasswordHaveAtleast1SpecialCharacter_ShouldReturn_true()
     {
-        boolean result = userValidationProcess.validateSpecialCharacter("Praju14@12");
+        boolean result = userValidationProcess.validateSpecialCharacter("P1@raju12");
         Assertions.assertTrue(result);
     }
     @Test

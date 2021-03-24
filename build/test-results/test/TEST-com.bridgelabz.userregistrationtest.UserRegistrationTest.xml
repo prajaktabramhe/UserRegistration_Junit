@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-03-19T14:30:41" hostname="DESKTOP-0QBG6NF" time="0.09">
+<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2021-03-24T15:17:16" hostname="DESKTOP-0QBG6NF" time="0.128">
   <properties/>
-  <testcase name="givenPhoneNumber_WhenPhoneNumberIsNOtFollowedByCountryCode_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.048"/>
-  <testcase name="givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
-  <testcase name="givenEmail_WhenEmailStartsWithCapitalLetter_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
-  <testcase name="givenPhoneNumber_WhenPhoneNumberNOTFollowedSpaceBetweenCountryCode_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
-  <testcase name="givenFirstName_WhenFirstNameInLowerCase_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenPhoneNumber_WhenPhoneNumberIsNOtFollowedByCountryCode_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.044"/>
+  <testcase name="givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
+  <testcase name="givenPassword_WhenPasswordDoNotHaveAtleast1UpperCase_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
+  <testcase name="givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenEmail_WhenEmailStartsWithCapitalLetter_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
+  <testcase name="givenPhoneNumber_WhenPhoneNumberNOTFollowedSpaceBetweenCountryCode_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
+  <testcase name="givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
+  <testcase name="givenPassword_WhenPasswordDoNotHaveAnySpecialCharacter_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenFirstName_WhenFirstNameInLowerCase_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
+  <testcase name="givenPassword_WhenPasswordDoNotHaveAnyDigit_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
   <testcase name="givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenPassword_WhenPasswordHaveAtleast1UpperCase_ShouldReturn_true()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
   <testcase name="givenPhoneNumber_WhenPhoneNumberIsFollowedByCountryCode_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
-  <testcase name="givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.003"/>
   <testcase name="givenLastName_WhenLastNameInLowerCase_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
   <testcase name="givenLastName_WhenLastNameStartWithLessThanThreeLetters_ShouldReturn_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
   <testcase name="givenEmail_WhenEmailContainOnlyOneLetterAfterDot_ShouldReturn_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
   <testcase name="givenFirstName_WhenFirstNameStartHaveMinThreeLetters_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
-  <testcase name="givenPhoneNumber_WhenPhoneNumberIsNOTTenDigit_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
-  <testcase name="givenFirstName_WhenFirstNameStartWithLessThanThreeLetters_ShouldReturn_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
-  <testcase name="givenLastName_WhenLastNameStartHaveMinThreeLetters_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenPassword_WhenPasswordHaveMinimum8Characters_ShouldReturn_true()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
+  <testcase name="givenPhoneNumber_WhenPhoneNumberIsNOTTenDigit_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenPassword_WhenPasswordHaveAtleast1SpecialCharacter_ShouldReturn_true()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenFirstName_WhenFirstNameStartWithLessThanThreeLetters_ShouldReturn_False()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.002"/>
+  <testcase name="givenLastName_WhenLastNameStartHaveMinThreeLetters_ShouldReturn_True()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

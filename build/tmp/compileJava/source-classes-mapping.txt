@@ -3,3 +3,4 @@ com/bridgelabz/userregistrationtest/UserValidationException.java
  com.bridgelabz.userregistrationtest.UserValidationException$ExceptionType
 com/bridgelabz/userregistration/UserValidationProcess.java
  com.bridgelabz.userregistration.UserValidationProcess
+ com.bridgelabz.userregistration.lambdaValidationFun

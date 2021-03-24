@@ -116,5 +116,12 @@ public class UserValidationProcess
             return false;
         }
     }
+
+    public String analyseMood(String message) {
+        if (message.contains("SAD"))
+            return "SAD";
+        else
+            return "Happy";
+    }
 }
 

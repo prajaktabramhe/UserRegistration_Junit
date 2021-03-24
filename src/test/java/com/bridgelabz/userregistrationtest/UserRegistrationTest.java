@@ -162,4 +162,12 @@ public class UserRegistrationTest
         boolean result = userValidationProcess.validateSpecialCharacter("Praju1412");
         Assertions.assertFalse(result);
     }
+    @Test
+    public  void givenMessage_WhenNotSad_ShouldReturnHappy()
+    {
+
+        String mood = userValidationProcess.analyseMood("This is a Happy Message");
+        Assertions.assertEquals("Happy", mood);
+
+    }
 }
